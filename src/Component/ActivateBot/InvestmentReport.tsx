@@ -3,7 +3,7 @@ import { P, Btn } from "../../AbstractElements";
 import { PayoutTitle} from "../../utils/Constant";
 import Breadcrumbs from "../../CommonElements/Breadcrumbs/Breadcrumbs";
 import HistoryTable from "../../CommonElements/SearchTable/SearchTable"
-import { monthly_ProfitIncome } from '../../Data/TableData/TableData';
+import { InvestmentReport, monthly_ProfitIncome } from '../../Data/TableData/TableData';
 import { Formik, Field, Form, FieldProps, ErrorMessage } from "formik";
 import DatePicker from "react-datepicker";
 import {SearchingTableData, SearchTableData_PropsType} from '../../Type/Forms/FormsType'
@@ -24,7 +24,7 @@ interface FormValues {
 
 
 
-const InvestmentReport = () => {
+const InvestmentReportContainer = () => {
   const [memberID, setmemberID] = useState(decryptData(localStorage.getItem('clientId') as string))
   const [API_Payload, setAPIPayload] =useState<any>({})
   const [SeaarchData_date, setSeaarchData_date] =useState<any>(null)
@@ -44,11 +44,10 @@ const InvestmentReport = () => {
     const formattedToDate = format(initialValues?.ToDate!, 'dd-MMMM-yyyy');
   setSeaarchData_date({FormDate:formattedFromDate, ToDate:formattedToDate})
   setAPIPayload({
-    procName:"GetRoiIncome",
-    Para:JSON.stringify({MemberId:memberID,FromDate:formattedFromDate, ToDate:formattedToDate, ActionMode:"GetAllRecordByMember"})
+    procName:"InvestmentReportAdmin",
+    Para:JSON.stringify({ClientId:memberID,FromDate:formattedFromDate, ToDate:formattedToDate, ActionMode:"MemberReport"})
   })
  },[])
-
 
  const handleSubmit = (values: FormValues) => {
    const formattedFromDate = format(values.FromDate!, 'dd-MMMM-yyyy');
@@ -56,8 +55,8 @@ const InvestmentReport = () => {
     // console.log(formattedFromDate, formattedToDate);
     setSeaarchData_date({FormDate:formattedFromDate, ToDate:formattedToDate})
     setAPIPayload({
-      procName:"GetRoiIncome",
-      Para:JSON.stringify({MemberId:memberID,FromDate:formattedFromDate, ToDate:formattedToDate, ActionMode:"GetAllRecordByMember"})
+      procName:"InvestmentReportAdmin",
+      Para:JSON.stringify({ClientId:memberID,FromDate:formattedFromDate, ToDate:formattedToDate, ActionMode:"MemberReport"})
     })
  };
 
@@ -124,10 +123,10 @@ const InvestmentReport = () => {
         </Form>
       )}
     </Formik>
-    <HistoryTable ColumnData={monthly_ProfitIncome} SeaarchData_date={SeaarchData_date} PageCate={'Payout'}  apiPayload={API_Payload}/>    
+    <HistoryTable ColumnData={InvestmentReport} SeaarchData_date={SeaarchData_date} PageCate={'Payout'}  apiPayload={API_Payload}/>    
       </Container>
     </>
   );
 };
 
-export default InvestmentReport;
+export default InvestmentReportContainer;

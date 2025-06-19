@@ -29,7 +29,7 @@ const ChangedValues = data.map((itm:any, index:number) => ({
                   </Col>
                   <Col xs="4" className="custom-width-2">
                     <div className={item.class}>
-                      <ReactApexChart options={item.chartData} series={item.chartData.series} height={55} type={item.chartData.chart?.type} />
+                      {/* <ReactApexChart options={item.chartData} series={item.chartData.series} height={55} type={item.chartData.chart?.type} /> */}
                     </div>
                   </Col>
                 </Row>

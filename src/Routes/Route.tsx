@@ -50,6 +50,7 @@ import LotteryTransferLog from "../Pages/Lottery/KingMakerzTransferLog";
 import KYC_Deposit from "../Pages/DepositFund/KYC_Deposit";
 import AadharKYC from "../Component/Profile/AadharKYC";
 import BuyGoldPage from "../Pages/ActivateBot/BuyGoldPage";
+import InvestmentReport from "../Component/ActivateBot/InvestmentReport";
 
 const routes = [
 
@@ -109,8 +110,8 @@ const routes = [
   { path: `${process.env.PUBLIC_URL}/fxstdeposit`, Component: <DepositFXSTToken /> },
   { path: `${process.env.PUBLIC_URL}/accountstatement`, Component: <AccountStatement /> },
   { path: `${process.env.PUBLIC_URL}/BuyGold`, Component: <BuyGoldPage /> },
+  { path: `${process.env.PUBLIC_URL}/BuyGoldReport`, Component: <InvestmentReport /> },
   
-
 ]
 
 export default routes;

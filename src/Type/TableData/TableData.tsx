@@ -216,4 +216,8 @@ export interface KingMakerzWalletReportInterface{
   center: boolean;
   Status:string;
 }
-
+export interface InvestmentReportInterface {
+  name:any,
+  sortable: boolean;
+  center: boolean;
+}

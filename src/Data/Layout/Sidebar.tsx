@@ -34,12 +34,23 @@ export const MenuList: MenuItem[] = [
         path: `${process.env.PUBLIC_URL}/accountsettings`,
         type: "link",
       },
-      {
-        icon: "Shield",
+      // {
+      //   icon: "Shield",
+      //   id: 1,
+      //   title: "Buy Gold",
+      //   path: `${process.env.PUBLIC_URL}/BuyGold`,
+      //   type: "link",
+      // },
+       {
+        icon: "Paper",
         id: 1,
-        title: "Buy Gold",
-        path: `${process.env.PUBLIC_URL}/BuyGold`,
-        type: "link",
+        active: false,
+        title: "Gold Section",
+        children: [
+            { path: `${process.env.PUBLIC_URL}/BuyGold`, title: "Buy Gold", type: "link" },
+            { path: `${process.env.PUBLIC_URL}/BuyGoldReport`, title: "Buy Gold Report", type: "link" },
+        ],
+        
       },
       // {
       //   icon: "Shield",
