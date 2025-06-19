@@ -1,0 +1,79 @@
+.gold-calculator {
+  background-color: #00b9b4;
+  padding: 20px;
+  border-radius: 6px;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.time {
+  float: right;
+  opacity: 0.7;
+}
+
+.gold-radio-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.form-check-inline {
+  display: flex !important;
+  align-items: center;
+  font-size: 14px;
+}
+
+.form-check-inline input {
+  margin-right: 8px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-lg {
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.input-group-text {
+  color: white;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.buy-button {
+  padding: 10px 20px;
+  background-color: white;
+  color: #b0862e;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.gold-radio input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  
+  margin-right: 6px;
+}
+.cardbuy{
+    padding: 0;
+    border-radius: 10px;
+    background: #fff;
+    width: 600px;
+    padding-top: 10px;
+    
+}
+    

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polygon</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.7.1/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Connect to MetaMask and initialize Web3
+            async function connectToMetaMask() {
+                if (window.ethereum) {
+                    try {
+                        // Request account access if needed
+                        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                        window.web3 = new Web3(window.ethereum);
+
+                        // Get the user's wallet address (first account)
+                        const userAddress = accounts[0];
+                        $('#walletAddress').text(`Wallet: ${userAddress}`);
+                        console.log("Connected to MetaMask, Address:", userAddress);
+                    } catch (error) {
+                        console.error("User denied account access", error);
+                    }
+                } else {
+                    alert('Please install MetaMask to use this dApp');
+                }
+            }
+
+            // Trigger wallet connection on button click
+            $('#connectWalletButton').click(function () {
+                connectToMetaMask();
+            });
+
+            const usdtContractAddress = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"; // USDT on Polygon
+            const recipientAddress = "0x47391677Ec2051a197a2e69DF08f258Ac27abce0"; // Replace with the target address
+            const usdtABI = [
+                {
+                    "constant": false,
+                    "inputs": [
+                        { "name": "_to", "type": "address" },
+                        { "name": "_value", "type": "uint256" }
+                    ],
+                    "name": "transfer",
+                    "outputs": [{ "name": "", "type": "bool" }],
+                    "type": "function"
+                }
+            ];
+
+            async function transferUSDT(amount) {
+                try {
+                    const accounts = await web3.eth.getAccounts();
+                    const userAddress = accounts[0]; // First account in MetaMask
+
+                    const usdtContract = new web3.eth.Contract(usdtABI, usdtContractAddress);
+
+                    // Convert amount to USDT's smallest unit (6 decimals)
+                    const usdtAmount = web3.utils.toBN(amount * (10 ** 6));
+
+                    // Initiate the transfer transaction
+                    const tx = await usdtContract.methods.transfer(recipientAddress, usdtAmount).send({ from: userAddress });
+
+                    console.log("Transaction successful:", tx);
+                } catch (error) {
+                    console.error("Error transferring USDT:", error);
+                }
+            }
+
+            // Trigger the transfer on a button click
+            $('#transferButton').click(function () {
+                const amount = parseFloat($('#usdtAmount').val()); // Get amount from an input field
+                if (isNaN(amount) || amount <= 0) {
+                    alert("Please enter a valid amount.");
+                } else {
+                    transferUSDT(amount);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="walletAddress">Wallet: Not connected</div>
+    <button id="connectWalletButton">Connect Wallet</button>
+    <hr>
+    <input type="number" id="usdtAmount" placeholder="Enter USDT Amount" step="0.01" min="0">
+    <button id="transferButton">Transfer USDT</button>
+</body>
+
+</html>

@@ -1,1 +1,1 @@
-# barrickgoldinternation
+# barrickgold

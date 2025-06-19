@@ -1,0 +1,17 @@
+.marquee-container {
+    // overflow: hidden;
+    // white-space: nowrap;
+    background-color: var(--body-color);
+    // width: 750px;
+    // display: flex;
+     span {
+    padding: 15px 16px;
+    font-size: 20px;
+     }
+}
+  
+  .marquee-content {
+    display: inline-block;
+    color: $primary-color;
+}
+  
