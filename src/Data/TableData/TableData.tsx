@@ -28,7 +28,8 @@ import {
     FXstPayWalletInterface,
     P2PWalletReportInterface,
     FXstPayToCommissionWalletInterface,
-    KingMakerzWalletReportInterface
+    KingMakerzWalletReportInterface,
+    InvestmentReportInterface
    } from "../../Type/TableData/TableData";
 import { useState } from 'react';
 
@@ -1602,3 +1603,53 @@ export const ActStatementColumns : TableColumn<DepositHistoryInterface> [] =[
 
  
 ]
+  export const InvestmentReport:TableColumn<InvestmentReportInterface>[] = [
+    {
+      name: "S.No.",
+      selector: (row:any) => row['S.No.'],
+      sortable: true,
+      center: false,
+      width:'100px'
+    },
+     {
+      name: "Client",
+      selector: (row:any) => row['Client'],
+      sortable: true,
+      center: false,
+      width:'100px'
+    },
+    {
+      name: "InvestmentAmount",
+      selector: (row:any) => row['InvestmentAmount'],
+      sortable: true,
+      center: false,
+      width:'200px'
+    },
+    {
+      name: "PricePerGramINR",
+      selector: (row:any) => row['PricePerGramINR'],
+      sortable: true,
+      center: false,
+    },
+   
+    {
+      name: "BuyIn",
+      selector: (row:any) => row['BuyIn'],
+      sortable: true,
+      center: false,
+    },
+     {
+      name: "WeightInGrams",
+      selector: (row:any) => row['WeightInGrams'],
+      sortable: true,
+      center: false,
+    },
+   
+    {
+      name: "InvestmentDate",
+      selector: (row:any) => row['InvestmentDate'],
+      sortable: true,
+      center: false,
+    },
+    
+  ]

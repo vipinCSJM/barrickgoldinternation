@@ -226,8 +226,8 @@ const ContainerDashboard = () => {
           <ProfileGreet profileName={profileName} loadingStatus={loading} />
           <AccountOverview actOverviewData={actOverview} LastLogin={LastLogin} />
 
-          {/* <Token tokenData={tokenData} /> */}
-          <Investing couponCode={couponCode} isApplicable={isCouponApplicable} coponcout={CoponCount} />
+          <Token tokenData={tokenData} />
+          {/* <Investing couponCode={couponCode} isApplicable={isCouponApplicable} coponcout={CoponCount} /> */}
 
           <AllIncome incomeData={allIncomes} />
           <TotalInvestment TotalinvestmentData={totalInvestment} />
