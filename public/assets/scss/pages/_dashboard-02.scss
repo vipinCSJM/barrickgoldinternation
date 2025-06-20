@@ -490,6 +490,9 @@
             li {
                 padding: 16px 14px;
                 gap: 10px;
+                background: linear-gradient(83deg, #000000, #917a00);
+    border-radius: 50px;
+    border-right: solid 60px #ffe600;
                 h6 {
                     @media (min-width: 1200px) and (max-width: 1879.98px) {
                         // text-overflow: ellipsis;

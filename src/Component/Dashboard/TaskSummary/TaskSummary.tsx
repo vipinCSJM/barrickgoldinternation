@@ -9,7 +9,7 @@ const TaskSummary = (props:any) => {
   return (
     <Col xl="6" md="6">
       <Card className="summary-card boxshadow">
-        <CardHeaderCommon headClass="pb-0" title={TaskSummaryHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly} />
+        <CardHeaderCommon headClass="pb-0 cardHeaderCustom" title={TaskSummaryHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly} />
         <CardBody>
           <Row className="py-4">
             <TaskSummaryLeft TeamData={TeamData} />

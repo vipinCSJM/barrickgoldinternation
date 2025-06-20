@@ -13,7 +13,7 @@ const CoursesHighlighted = (props:MyComponentProps) => {
   return (
     <Col xl="6" md="6">
       <Card className="boxshadow">
-        <CardHeaderCommon headClass="pb-0" title={RewardHighlightedHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly} />
+        <CardHeaderCommon headClass="pb-0 cardHeaderCustom" title={RewardHighlightedHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly} />
         <CardBody className="pt-0 course-table">
            <Col className="text-center"  style={{height:'240px', display:'block', overflow:'hidden'}}>
             {LatestAnnouncement.length > 0 ? <div className="vertical-marquee">

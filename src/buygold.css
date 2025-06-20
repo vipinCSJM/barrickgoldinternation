@@ -1,12 +1,13 @@
 .gold-calculator {
-  background-color: #00b9b4;
+  background-color: #5c5c5c;
   padding: 20px;
   border-radius: 6px;
   color: white;
   max-width: 600px;
   margin: 0 auto;
-  font-family: sans-serif;
+   font-family: "Comfortaa", sans-serif;
   position: relative;
+  text-align: center;
 }
 
 .time {
@@ -60,7 +61,7 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 24px;
 }
 .gold-radio input[type="radio"] {
   width: 20px;
@@ -69,11 +70,76 @@
   margin-right: 6px;
 }
 .cardbuy{
-    padding: 0;
+    padding: 20px;
     border-radius: 10px;
-    background: #fff;
-    width: 600px;
-    padding-top: 10px;
+    background: #454141;
+
     
 }
-    
+    .rupeeIcon{
+          font-size: 20px;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-color: #ffe100;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    color: #000 !important;
+    border: solid 1px;
+    }
+
+    .radio-group {
+  display: flex;
+  gap: 20px;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 16px;
+}
+
+.custom-radio {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  color: #FFD700; /* Gold text */
+  user-select: none;
+  font-size: 20px;
+}
+
+.custom-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-mark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.custom-radio input:checked ~ .radio-mark {
+  background-color: #FFD700;
+  box-shadow: 0 0 5px #FFD700;
+}
+
+.radio-mark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: black;
+}
+
+.custom-radio input:checked ~ .radio-mark::after {
+  display: block;
+}

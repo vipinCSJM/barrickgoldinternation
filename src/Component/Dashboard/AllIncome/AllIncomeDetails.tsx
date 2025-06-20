@@ -17,7 +17,7 @@ const AllIncomeDetails = (props:any) => {
   return (
     <>
       {Data?.map((item:any, i:number) => (
-        <tr key={i}>
+        <tr style={{background:'#000'}} key={i}>
           <td style={{width:'50%', padding:'0px !important'}}>
             <div className="d-flex align-items-center gap-2">
               <div className="flex-shrink-0 px-0">
@@ -34,7 +34,7 @@ const AllIncomeDetails = (props:any) => {
           </td>
           <td className="px-0 fw-bolder" dangerouslySetInnerHTML={{ __html: item.Amt }}></td>
           <td>
-          <Link to={item?.path}> <Btn className={`edge-btn f-13 w-100`} color='light-primary'>
+          <Link to={item?.path}> <Btn className={` f-13 w-100`} color='light-primary'>
               View
               </Btn>
               </Link>

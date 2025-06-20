@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Col, Container, Row } from "reactstrap";
+import {Image } from "../../AbstractElements";
 import { ActivateBot, buygold } from "../../utils/Constant";
 import Breadcrumbs from "../../CommonElements/Breadcrumbs/Breadcrumbs";
 import ActivateBotForm from "./ActivateBotForm";
+
 import { useBotService } from '../../Service/ActivateBot/ActivateBot'
 import { decryptData } from "../../utils/helper/Crypto";
 import  "../../buygold.css";
@@ -190,9 +192,9 @@ const GOLD_PRICE_PER_GRAM = pricePerGramINR; // ₹ per gram
       <Breadcrumbs mainTitle={buygold} parent={buygold} />
       <Container fluid>
         <Row>
-          <Col xl="12">
+          <Col xl="6" xs="12">
           <div className="cardbuy">
-<button className="btn-info py-2 pe-2 gold-calculator livePrice_box" color="info" style={{ fontSize: '18px', textAlign: 'justify', width: '400px',marginBottom:'10px' }} type="button">
+<button className="btn-info py-2 pe-2 gold-calculator livePrice_box" color="info" style={{ fontSize: '18px', textAlign: 'justify',background:'#000',border:'0px',borderRadius:'50px', marginBottom:'10px' }} type="button">
                 Wallet Balance :<span> &nbsp;₹ {walletBalance}</span>
             </button>
           
@@ -209,8 +211,8 @@ const GOLD_PRICE_PER_GRAM = pricePerGramINR; // ₹ per gram
       <div className="form-group timer-div">
         <span className="time" id="Timer">{formatTime(timeLeft)}</span>
       </div>
-      <div className="form-group gold-radio-container">
-        <label className="form-check-inline gold-radio">
+      <div className="form-group gold-radio-container radio-group">
+        <label className="form-check-inline gold-radio custom-radio">
           <input
             type="radio"
             name="goldRadio"
@@ -223,9 +225,9 @@ setconvertedPrice(0);
   setConvertedGrams(null); 
          }}
           />
-          <span></span>Buy in rupees
+          <span className='radio-mark'></span>Buy in rupees
         </label>
-        <label className="form-check-inline gold-radio">
+        <label className="form-check-inline gold-radio custom-radio">
           <input
             type="radio"
             name="goldRadio"
@@ -238,15 +240,15 @@ setconvertedPrice(0);
               setconvertedPrice(0)
             }}
           />
-          <span></span>Buy in grams
+          <span className='radio-mark'></span>Buy in grams
         </label>
       </div>
 
       <div className="measurement-input">
         <div className="input-group">
-         {buyIn === 'rupee' ? '₹':'' }
+         {buyIn === 'rupee' ? <span className='rupeeIcon'>₹</span> : ''}
           <input
-  type="number"
+  type="number" style={{gap:'0'}}
   className="form-control input-lg"
   placeholder={buyIn === 'rupee' ? 'Enter amount in ₹' : 'Enter grams'}
   value={amount}
@@ -264,7 +266,7 @@ setconvertedPrice(0);
   }}
   maxLength={9}
 />
-          {buyIn === 'grams' ? 'g':'' }
+          {buyIn === 'grams' ?<span className='rupeeIcon' style={{borderRadius:'0px'}}>g</span>:'' }
           {convertedGrams !== null && buyIn === 'rupee' && (
             <span className="input-group-text">= {convertedGrams.toFixed(4)} g</span>
           )}
@@ -282,6 +284,9 @@ setconvertedPrice(0);
     
           </div>
           
+          </Col>
+          <Col xl="6" xs="12">
+           <Image  alt='popimage' title='popImage' src={("assets/images/logo/sideimage.png")} />
           </Col>
         </Row>
       </Container>

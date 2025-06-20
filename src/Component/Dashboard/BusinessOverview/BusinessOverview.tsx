@@ -8,13 +8,13 @@ const CategoryOverview = (props:any) => {
   return (
     <Col md="6" xl="6" className="ecommerce-dashboard ">
       <Card className="boxshadow">
-        <CardHeaderCommon title={BusinessOverviewHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly} />
+        <CardHeaderCommon headClass="cardHeaderCustom" title={BusinessOverviewHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly} />
         <CardBody className="category" style={{paddingTop:'0px'}}>
           <Row>
-            <Col xl="6" xs="6">
+            <Col xl="6" xs="6"  style={{marginTop:'10px'}}>
               <LegBusinessOverview LegBOverviewData={props?.LegBViewdata}/>
             </Col>
-            <Col xl="6" xs="6">
+            <Col xl="6" xs="6" style={{marginTop:'10px'}}>
               <BusinessOverviewDetails  overViewdata={props?.BOverviewData}/>
             </Col>
           </Row>

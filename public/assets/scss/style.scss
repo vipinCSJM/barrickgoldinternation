@@ -518,13 +518,21 @@ body {
 }
 
 .boxshadow {
-    border: 0px !important;
-    box-shadow: inset -1px 0px 5px 2px #dab348 !important;
+    background-image: url('../images/dashboard1/cardbg.png');
+      background-repeat: no-repeat;
+      background-position: center ;
+      background-size: cover;
 }
-
+.page-sidebar{
+   background-image: url('../images/dashboard1/sidebar.jpg');
+      background-repeat: no-repeat;
+      background-position: center ;
+      background-size: cover;  
+}
 .page-wrapper .page-body-wrapper .page-body {
-    background-image: url('../images/dashboardBg.jpg');
-    background-size: cover;
+    background: #000 !important;
+    // background-image: url('../images/dashboardBg.jpg');
+    // background-size: cover;
 }
 
 .notEligible p {
@@ -544,14 +552,19 @@ body {
     background-image: url('../images/Bg/goldenheader.jpg') !important;
     margin: 0 !important;
     border-radius: 5px 5px 0px 0px !important;
+    background-position: right;
+    background-size: cover;
+    height: 70px;
+    /* padding: 10px; */
+    padding-top: 20px;
 }
-
 .font-seeGreen {
     color: #43b9b2 !important
 }
 
 .cardHeaderCustom h4 {
-    color: #000 !important;
+    color: #ffffff !important;
+   
 }
 
 // .bgWrapper {
@@ -985,3 +998,30 @@ body {
     margin-right: 5px;
 }
 
+.edge-btn{
+    
+    background: linear-gradient(135deg, #fff200 0%, #ffd700 25%, #e6ac00 50%, #ffc400 75%, #fff200 100%);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.4), inset 0 0 10px rgba(255, 215, 0, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+    color: #000 !important;
+    font-weight: bold;
+    overflow: hidden;
+}
+.edge-btn:hover{
+    color: #000 !important;
+    font-weight: bolder;
+}
+.blink-image {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%   { opacity: 0.3; }
+    20%  { opacity: 0.4; }
+      30%  { opacity: 0.5; }
+       40%  { opacity: 0.6; }
+  50%  { opacity: 0.8; }
+    70%  { opacity: 0.9; }
+  100% { opacity: 1; }
+}

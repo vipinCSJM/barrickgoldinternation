@@ -165,24 +165,25 @@
       display: block;
       height: 265px;
       padding: 22px 24px;
-      @media (min-width: 1200px) and (max-width: 1800px) {
-        background-position: right -16% bottom 67%;
-      }
-      @media (min-width: 1200px) and (max-width: 1735px) {
-        background-position: right -40% bottom 83%;
-      }
-      @media (min-width: 1200px) and (max-width: 1660px) {
-        background-position: right -2% bottom 150%;
-      }
-      @media (min-width: 1200px) and (max-width: 1555px) {
-        background-position: right -73% bottom 147%;
-      }
-      @media (min-width: 1200px) and (max-width: 1500px) {
-        background-position: right -224% bottom 147%;
-      }
-      @media (min-width: 1450px) and (max-width: 1470px) {
-        background-position: right -531% bottom 176%;
-      }
+      background-size: cover;
+      // @media (min-width: 1200px) and (max-width: 1800px) {
+      //   background-position: right -16% bottom 67%;
+      // }
+      // @media (min-width: 1200px) and (max-width: 1735px) {
+      //   background-position: right -40% bottom 83%;
+      // }
+      // @media (min-width: 1200px) and (max-width: 1660px) {
+      //   background-position: right -2% bottom 150%;
+      // }
+      // @media (min-width: 1200px) and (max-width: 1555px) {
+      //   background-position: right -73% bottom 147%;
+      // }
+      // @media (min-width: 1200px) and (max-width: 1500px) {
+      //   background-position: right -224% bottom 147%;
+      // }
+      // @media (min-width: 1450px) and (max-width: 1470px) {
+      //   background-position: right -531% bottom 176%;
+      // }
       @media (min-width: 1200px) and (max-width: 1450px) {
         background-image: none !important;
         padding: 15px !important;
@@ -300,7 +301,7 @@
       }
     }
     p {
-      width: 220px;
+      // width: 220px;
       font-size: 16px;
       margin-bottom: 0;
       color: var(--light-font);
@@ -1528,7 +1529,7 @@
       margin-bottom: 4px;
     }
     h5 {
-      color: var(--body-font-color);
+      color:#fff ;
       font-weight: 500;
       margin-bottom: 10px;
       @media (max-width: 1700px) {

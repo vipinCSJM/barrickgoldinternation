@@ -47,7 +47,7 @@ const ProfileGreet = (props: any) => {
             <H6>{Rank ? Rank : 'NO Rank'}</H6> */}
             
             <P className="mb-1">
-              Welcome to the Barrick Gold<br /> family!
+              Welcome to the Barrick Gold family!
             </P>
             <CopyToClipboard text={localStorage.getItem("refURL") as string} onCopy={CopyCallBack} >
               <Btn color="primary f-14 mt-3 mt-xl-4 text-black">

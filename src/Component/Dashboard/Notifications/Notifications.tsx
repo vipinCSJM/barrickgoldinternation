@@ -12,7 +12,7 @@ const Notifications = () => {
   return (
     <Col xl="6" sm="6" >
       <Card className="notification-card text-center boxshadow">
-        <CardHeaderCommon headClass="pb-3 pt-0" title={NotificationsHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly}/>
+        <CardHeaderCommon headClass=" pt-0 cardHeaderCustom" title={NotificationsHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly}/>
         <CardBody className="text-center px-5 py-5 px-lg-3">
         <IoIosNotificationsOff size={100}/>
         <H5>Hi, {UserName}</H5>

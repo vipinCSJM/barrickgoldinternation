@@ -2,7 +2,10 @@
      typography css start
 ==========================**/
 body {
-    font-family: $body-font;
+    font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
     font-size: 15px;
     background-color: var(--body-color);
     color: var(--body-font-color);

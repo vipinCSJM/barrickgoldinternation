@@ -20,9 +20,12 @@ const Wallet = (props:any) => {
   ]
   return (
     <Col md="4" xl="4">
+         <Link to={Href}><Image  alt='popimage' title='popImage' className="blink-image" src={("assets/images/logo/GoldButton.png")}  style={{width:'100%'}}/></Link>
+         <hr/>
       <Card className="bgWrapper boxshadow pt-0">
         <CardHeaderCommon headClass="pb-0 cardHeaderCustom" title={WalletHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly}/>
         <CardBody className="manage-order">
+       
           <Table>
             <tbody>
               {Data.map((data:any, i:number) => (
