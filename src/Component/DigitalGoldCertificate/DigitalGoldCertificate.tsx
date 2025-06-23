@@ -22,6 +22,7 @@ const DigitalGoldCertificate = ({
             BARRICK GOLD INTERNATIONAL
           </strong>
         </div>
+        
         <div style={{ textAlign: "right" }}>
           Certificate ID: <strong>{certificateId}</strong>
           <br />
