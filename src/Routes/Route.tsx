@@ -115,6 +115,7 @@ const routes = [
   { path: `${process.env.PUBLIC_URL}/accountstatement`, Component: <AccountStatement /> },
   { path: `${process.env.PUBLIC_URL}/BuyGold`, Component: <BuyGoldPage /> },
   { path: `${process.env.PUBLIC_URL}/BuyGoldReport`, Component: <InvestmentReport /> },
+  { path: `${process.env.PUBLIC_URL}/DigitalCertificatePage/:id`, Component: <DigitalCertificatePage /> },
   
 ]
 
