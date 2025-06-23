@@ -219,9 +219,11 @@ export const MonthlyProfitIncome = "Monthly Profit Income";
 export const CashLevelIncome = "Cash Level Income";
 export const RoyaltyLogIncome = "Royalty Log Income";
 export const AffiliateIncome="Affiliate Income"
-
+export const RewardReport="Reward Report"
+export const PromotionalIncomeReport="Promotional Income Report"
 
 export const PayoutTitle = "Payout";
+
 // Common Modal
 export const ScrollingContent = "Hello";
 export const ScrollingModalHeading = "Account Details";

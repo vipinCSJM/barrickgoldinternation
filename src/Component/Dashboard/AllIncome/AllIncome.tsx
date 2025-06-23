@@ -5,7 +5,6 @@ import AllIncomeDetails from "./AllIncomeDetails";
 
 const AllIncome = (props:any) => {  
   
-  
   return (
     <Col md="5" xl="5">
       <Card className="invoice-card boxshadow pt-0 pb-2">

@@ -51,7 +51,6 @@ export const MenuList: MenuItem[] = [
             { path: `${process.env.PUBLIC_URL}/BuyGoldReport`, title: "Buy Gold Report", type: "link" },
               { path: `${process.env.PUBLIC_URL}/DigitalCertificatePage`, title: "Digital Certificate", type: "link" },
         ],
-        
       },
       // {
       //   icon: "Shield",
@@ -97,7 +96,6 @@ export const MenuList: MenuItem[] = [
         active: false,
         title: "Wallet Transfer",
         children: [
-        
           // { path: `${process.env.PUBLIC_URL}/FxstockWallet`, title: "Fxstock Wallet", type: "link" },
           // { path: `${process.env.PUBLIC_URL}/fxstpaytocommission`, title: "FXST Pay Transfer", type: "link" },
           // { path: `${process.env.PUBLIC_URL}/FxstPayWallet`, title: "FXST Pay Wallet", type: "link" },
@@ -133,8 +131,6 @@ export const MenuList: MenuItem[] = [
         children: [
           { path: `${process.env.PUBLIC_URL}/RequestWithdraw`, title: "Request Withdraw", type: "link" },
           { path: `${process.env.PUBLIC_URL}/WithdrawHistory`, title: "Withdraw Report", type: "link" },
-         
-         
         ],
       },
       {
@@ -146,6 +142,10 @@ export const MenuList: MenuItem[] = [
            { path: `${process.env.PUBLIC_URL}/botlevelincome`, title: "Sponsor Income", type: "link" },
           { path: `${process.env.PUBLIC_URL}/monthlyprofitincome`, title: "Monthly Roi Income", type: "link" },
           { path: `${process.env.PUBLIC_URL}/profitsharing`, title: "Affiliate Income", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/RewardReport`, title: "Reward Report", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/PromotionalClub`, title: "Promotional Income", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/PromotionalStatus`, title: "Promotional Club Status", type: "link" },
+
            //{ path: `${process.env.PUBLIC_URL}/profitsharing`, title: "Affiliate Income", type: "link" },
           // { path: `${process.env.PUBLIC_URL}/chashbacklevel`, title: "Cashback Level", type: "link" },
           // { path: `${process.env.PUBLIC_URL}/royaltylog`, title: "Royalty Log", type: "link" },
@@ -159,7 +159,7 @@ export const MenuList: MenuItem[] = [
         active: false,
         title: "Team Overview",
         children: [
-          { path: `${process.env.PUBLIC_URL}/myteambusiness`, title: "Team Business", type: "link" },
+          // { path: `${process.env.PUBLIC_URL}/myteambusiness`, title: "Team Business", type: "link" },
           { path: `${process.env.PUBLIC_URL}/teamdownline`, title: "Team Downline", type: "link" },
           { path: `${process.env.PUBLIC_URL}/tree`, title: "Generation tree", type: "link" },
           { path: `${process.env.PUBLIC_URL}/sponsorlist`, title: "My Direct", type: "link" },

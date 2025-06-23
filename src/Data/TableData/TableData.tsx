@@ -29,7 +29,10 @@ import {
     P2PWalletReportInterface,
     FXstPayToCommissionWalletInterface,
     KingMakerzWalletReportInterface,
-    InvestmentReportInterface
+    InvestmentReportInterface,
+    RewardReportInterface,
+    PromotionalInterface,
+    PromotionalStatusInterface
    } from "../../Type/TableData/TableData";
 import { useState } from 'react';
 
@@ -1576,9 +1579,6 @@ export const ActStatementColumns : TableColumn<DepositHistoryInterface> [] =[
     center: true,
     width:'250px'
   },
-
-
-
   {
     name: "Description",
     selector: (row:any) => row['Description'],
@@ -1603,53 +1603,145 @@ export const ActStatementColumns : TableColumn<DepositHistoryInterface> [] =[
 
  
 ]
-  export const InvestmentReport:TableColumn<InvestmentReportInterface>[] = [
+
+  export const ReportReport:TableColumn<RewardReportInterface>[] = [
     {
-      name: "S.No.",
-      selector: (row:any) => row['S.No.'],
+      name: "SrNo",
+      selector: (row:any) => row['SrNo'],
       sortable: true,
       center: false,
       width:'100px'
     },
      {
-      name: "Client",
-      selector: (row:any) => row['Client'],
+      name: "Reward_Name",
+      selector: (row:any) => row['Reward_Name'],
+      sortable: true,
+      center: false,
+    },
+     {
+      name: "RequiredBusiness",
+      selector: (row:any) => row['RequiredBusiness'],
       sortable: true,
       center: false,
       width:'100px'
     },
     {
-      name: "InvestmentAmount",
-      selector: (row:any) => row['InvestmentAmount'],
+      name: "ClientBusiness",
+      selector: (row:any) => row['ClientBusiness'],
       sortable: true,
       center: false,
       width:'200px'
     },
-    {
-      name: "PricePerGramINR",
-      selector: (row:any) => row['PricePerGramINR'],
-      sortable: true,
-      center: false,
-    },
    
     {
-      name: "BuyIn",
-      selector: (row:any) => row['BuyIn'],
+      name: "Reward",
+      selector: (row:any) => row['Reward'],
       sortable: true,
       center: false,
     },
      {
-      name: "WeightInGrams",
-      selector: (row:any) => row['WeightInGrams'],
+      name: "EntryDate",
+      selector: (row:any) => row['EntryDate'],
       sortable: true,
       center: false,
     },
-   
     {
-      name: "InvestmentDate",
-      selector: (row:any) => row['InvestmentDate'],
+      name: "UpdateDate",
+      selector: (row:any) => row['UpdateDate'],
+      sortable: true,
+      center: false,
+    },
+     {
+      name: "Status",
+      selector: (row:any) => row['Status'],
+      sortable: true,
+      center: false,
+    },
+  ]
+  export const PromotionReport:TableColumn<PromotionalInterface>[] = [
+    {
+      name: "SrNo",
+      selector: (row:any) => row['SrNo'],
+      sortable: true,
+      center: false,
+      width:'100px'
+    },
+     {
+      name: "ClientId",
+      selector: (row:any) => row['ClientId'],
       sortable: true,
       center: false,
     },
     
+    {
+      name: "PromotionalClub",
+      selector: (row:any) => row['PromotionalClub'],
+      sortable: true,
+      center: false,
+    },
+     
+     {
+      name: "ClubName",
+      selector: (row:any) => row['ClubName'],
+      sortable: true,
+      center: false,
+    },
+    {
+      name: "IncomeDate",
+      selector: (row:any) => row['IncomeDate'],
+      sortable: true,
+      center: false,
+      //width:'100px'
+    },
+  ]
+
+  export const PromotionStatusReport:TableColumn<PromotionalStatusInterface>[] = [
+    {
+      name: "SrNo",
+      selector: (row:any) => row['SrNo'],
+      sortable: true,
+      center: false,
+      width:'100px'
+    },
+     {
+      name: "UserId",
+      selector: (row:any) => row['UserId'],
+      sortable: true,
+      center: false,
+    },
+    
+    {
+      name: "RequiredBusiness",
+      selector: (row:any) => row['RequiredBusiness'],
+      sortable: true,
+      center: false,
+    },
+     
+     {
+      name: "MemberBusiness",
+      selector: (row:any) => row['MemberBusiness'],
+      sortable: true,
+      center: false,
+    },
+    {
+      name: "Reward_Name",
+      selector: (row:any) => row['Reward_Name'],
+      sortable: true,
+      center: false,
+      //width:'100px'
+    },
+     {
+      name: "Reward_Name",
+      selector: (row:any) => row['Reward_Name'],
+      sortable: true,
+      center: false,
+      //width:'100px'
+    },
+    {
+      name: "QualifyDate",
+      selector: (row:any) => row['QualifyDate'],
+      sortable: true,
+      center: false,
+      //width:'100px'
+    },
   ]
