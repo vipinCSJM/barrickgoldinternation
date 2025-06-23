@@ -10,7 +10,8 @@ import SvgIcon from '../../CommonElements/SVG/SvgIcon'
 import { decryptData} from "../../utils/helper/Crypto";
 import { useEffect, useState } from 'react'
 import user from './images/user.png'
-import { useRef } from 'react'
+import { useRef } from 'react';
+
 
 const UserCardsContainer = () => {
   const [ClientId, setClientId] = useState<any>(decryptData(localStorage.getItem("clientId") as string))
@@ -132,7 +133,10 @@ const printCard = ()=>{
                   </div>
                 </CardBody>
               </Card>
+          
+           
             </Col>
+           
           ))}
         </Row>
       </Container>
