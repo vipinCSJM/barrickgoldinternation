@@ -49,6 +49,7 @@ export const MenuList: MenuItem[] = [
         children: [
             { path: `${process.env.PUBLIC_URL}/BuyGold`, title: "Buy Gold", type: "link" },
             { path: `${process.env.PUBLIC_URL}/BuyGoldReport`, title: "Buy Gold Report", type: "link" },
+              { path: `${process.env.PUBLIC_URL}/DigitalCertificatePage`, title: "Digital Certificate", type: "link" },
         ],
         
       },
