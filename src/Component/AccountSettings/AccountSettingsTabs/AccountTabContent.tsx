@@ -263,11 +263,11 @@ const BorderTabContent: React.FC<TabContentProp> = ({ basicTab }) => {
                         <Field type="text" name="WalletAddress" autoComplete="off"  className="form-control" placeholder="Wallet Address " />
                         <ErrorMessage name="WalletAddress" component="div" className="text-danger" />
                       </Col>
-                      <Col sm="4" md="4" >
+                      {/* <Col sm="4" md="4" >
                         <Label>FXST Recieving Address(Bep20(BSC)Chain)</Label>
                         <Field type="text" name="FXSTRecievingAddress" autoComplete="off" className="form-control" placeholder="FXST Recieving Address" />
                         <ErrorMessage name="FXSTRecievingAddress" component="div" className="text-danger" />
-                      </Col>
+                      </Col> */}
                       <Col sm="4" md="4"  className="position-relative">
                         <Label>One Time Password</Label>
                         <Field type="text" name="OTP" autoComplete="off" onBlur={handleBlur} onChange={handleChange}  className="form-control" placeholder="One Time Password" />

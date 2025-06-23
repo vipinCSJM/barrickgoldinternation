@@ -32,7 +32,7 @@ const BorderTabs = () => {
                 {BankInr}
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink
                 href={Href}
                 className={`nav-border font-primary tab-primary ${basicTab === "3" ? "active" : ""}`}
@@ -41,8 +41,8 @@ const BorderTabs = () => {
                  <i className="fa fa-key"></i>
                 {BankAED}
               </NavLink>
-            </NavItem>
-            <NavItem>
+            </NavItem> */}
+            {/* <NavItem>
               <NavLink
                 href={Href}
                 className={`nav-border font-primary tab-primary ${basicTab === "4" ? "active" : ""}`}
@@ -51,7 +51,7 @@ const BorderTabs = () => {
                  <i className="fa fa-key"></i>
                 {creditcard}
               </NavLink>
-            </NavItem> 
+            </NavItem>  */}
           </Nav>
           <BorderTabContent basicTab={basicTab} />
         </CardBody>

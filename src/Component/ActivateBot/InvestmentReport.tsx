@@ -14,6 +14,7 @@ import { decryptData} from "../../utils/helper/Crypto";
 import {format} from 'date-fns'
 import { TableColumn } from "react-data-table-component";
 import { useBotService } from "../../Service/ActivateBot/ActivateBot";
+import { useNavigate } from "react-router-dom";
 // interface MyFormValues {
 //   FromDate: string;
 //   ToDate: string;
@@ -86,6 +87,17 @@ const InvestmentReportContainer = () => {
       ProcessWithdrawInvestment(id)
   };
 }, []);
+
+
+  const navigate = useNavigate();
+useEffect(() => {
+  (window as any).handleCertificate = (id: number) => {
+    console.log("Called from global onclick, ID:", id);
+    // Your logic here
+        navigate(`${process.env.PUBLIC_URL}/DigitalCertificatePage/${id}`);
+  };
+}, [[navigate]]);
+
    const InvestmentReport:TableColumn<any>[] = [
     {
       name: "S.No.",
@@ -94,13 +106,13 @@ const InvestmentReportContainer = () => {
       center: false,
       width:'100px'
     },
-     {
-      name: "Client",
-      selector: (row:any) => row['Client'],
-      sortable: true,
-      center: false,
-      width:'100px'
-    },
+    //  {
+    //   name: "Client",
+    //   selector: (row:any) => row['Client'],
+    //   sortable: true,
+    //   center: false,
+    //   width:'100px'
+    // },
     {
       name: "InvestmentAmount",
       selector: (row:any) => row['InvestmentAmount'],
@@ -144,6 +156,18 @@ const InvestmentReportContainer = () => {
       />
     )
     },
+     {
+      name: "Certificate",
+      selector: (row:any) => row['Certificate'],
+      sortable: true,
+      center: false,
+       cell: (row:any) => (
+      <div
+        dangerouslySetInnerHTML={{ __html: row['Certificate'] }}
+      />
+     )
+    },
+    
   ]
 
 

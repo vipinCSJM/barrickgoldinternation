@@ -50,7 +50,7 @@ const WalletTransferFxstPayPageContainer = () => {
     WalletType: Yup.string().required("Select Wallet Type"),
     WithdrawMode: Yup.string().required("Select Withdraw Mode"),
     WithdrawAmount: Yup.number()
-      .min(50, 'Minimum withdraw amount is $50')
+      .min(50, 'Minimum withdraw amount is ₹50')
       .required('Enter Withdraw Amount'),
     OTP: Yup.string().required("Enter OTP"),
   });
