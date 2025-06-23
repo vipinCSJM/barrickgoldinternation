@@ -8,10 +8,10 @@ const AllIncomeDetails = (props:any) => {
   const {Allincomes} = props 
   
   let Data = [
-    {title:Allincomes[0]?.key, Amt:Allincomes[0]?.value, icon:<Image className="b-r-10 img-40" src={dynamicImage(`avatar/1.png`)} alt="avatar" />, path:`${process.env.PUBLIC_URL}/monthlyprofitincome`},
-    {title:Allincomes[1]?.key, Amt:Allincomes[1]?.value,icon:<Image className="b-r-10 img-40" src={dynamicImage(`avatar/2.png`)} alt="avatar" />, path:Href},
-    {title:Allincomes[2]?.key, Amt:Allincomes[2]?.value,icon:<Image className="b-r-10 img-40" src={dynamicImage(`avatar/3.png`)} alt="avatar" />, path:`${process.env.PUBLIC_URL}/botlevelincome`},
-    {title:Allincomes[3]?.key, Amt:Allincomes[3]?.value,icon:<Image className="b-r-10 img-40" src={dynamicImage(`avatar/4.png`)} alt="avatar" />, path:`${process.env.PUBLIC_URL}/profitsharing`},
+    {title:Allincomes[0]?.key, Amt:Allincomes[0]?.value, icon:<Image className="b-r-10 img-40" src={dynamicImage(`avatar/1.png`)} alt="avatar" />, path:`${process.env.PUBLIC_URL}/botlevelincome`},
+    {title:Allincomes[1]?.key, Amt:Allincomes[1]?.value,icon:<Image className="b-r-10 img-40" src={dynamicImage(`avatar/2.png`)} alt="avatar" />, path:`${process.env.PUBLIC_URL}/monthlyprofitincome`},
+    {title:Allincomes[2]?.key, Amt:Allincomes[2]?.value,icon:<Image className="b-r-10 img-40" src={dynamicImage(`avatar/3.png`)} alt="avatar" />, path:`${process.env.PUBLIC_URL}/profitsharing`},
+    {title:Allincomes[3]?.key, Amt:Allincomes[3]?.value,icon:<Image className="b-r-10 img-40" src={dynamicImage(`avatar/4.png`)} alt="avatar" />, path:`${process.env.PUBLIC_URL}/PromotionalClub`},
     {title:Allincomes[4]?.key, Amt:Allincomes[4]?.value,icon:<Image className="b-r-10 img-40" src={dynamicImage(`avatar/5.png`)} alt="avatar" />, path:`${process.env.PUBLIC_URL}/royaltylog`}
   ]
   return (

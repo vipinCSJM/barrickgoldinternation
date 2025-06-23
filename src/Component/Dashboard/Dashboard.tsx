@@ -123,8 +123,8 @@ const ContainerDashboard = () => {
       setTotalEarning([data[0]?.DailyTradingProfit, `$${0}`])
       setallIncomes(objectEntriesToArray({
         "Direct Income": `₹${data[0]?.SponsorIncome}`,
-        "Roi Income": `₹${data[0]?.DailyProfitIncome}`,
-        "Affiliate Income": `₹${data[0]?.ProfitSharingIncome}`,
+        "Monthly Roi Income": `₹${data[0]?.DailyProfitIncome}`,
+        "Affiliate Income": `₹${data[0]?.AffliateIncome}`,
         "Promotion Club Income":`₹${data[0]?.PromotionClubIncome}`,
         "Royalty Income": `₹${data[0]?.RoyalityLog}`,
         
@@ -132,13 +132,13 @@ const ContainerDashboard = () => {
       setBusniessoverView(objectEntriesToArray({
         // 'Total Business': data[0]?.TotalZoneBusines,
         // 'Today Business': '$' + data[0]?.TodayBusiness
-        "Level 4": data[0]?.Level4BV,
-        "Level 5": data[0]?.Level5BV,
+        "Level 4":'₹'+data[0]?.Level4BV,
+        "Level 5":'₹'+ data[0]?.Level5BV,
       }))
       setLegBOverview(objectEntriesToArray({
-        "Level 1": data[0]?.Level1BV,
-        "Level 2": data[0]?.Level2BV,
-        "Level 3": data[0]?.Level3BV,
+        "Level 1": '₹'+data[0]?.Level1BV,
+        "Level 2": '₹'+data[0]?.Level2BV,
+        "Level 3": '₹'+data[0]?.Level3BV,
         
       }))
 

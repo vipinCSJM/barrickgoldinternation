@@ -51,6 +51,9 @@ import KYC_Deposit from "../Pages/DepositFund/KYC_Deposit";
 import AadharKYC from "../Component/Profile/AadharKYC";
 import BuyGoldPage from "../Pages/ActivateBot/BuyGoldPage";
 import InvestmentReport from "../Component/ActivateBot/InvestmentReport";
+import RewardReport from "../Component/Payout/RewardReport";
+import PromotionalClubPage from "../Pages/Payout/PromotionalClub";
+import PromotionalStatus from "../Pages/Payout/PromotionalStatus";
 import DigitalCertificatePage from "../Pages/ActivateBot/DigitalCertificatePage";
 
 const routes = [
@@ -112,7 +115,6 @@ const routes = [
   { path: `${process.env.PUBLIC_URL}/accountstatement`, Component: <AccountStatement /> },
   { path: `${process.env.PUBLIC_URL}/BuyGold`, Component: <BuyGoldPage /> },
   { path: `${process.env.PUBLIC_URL}/BuyGoldReport`, Component: <InvestmentReport /> },
-  { path: `${process.env.PUBLIC_URL}/DigitalCertificatePage`, Component: <DigitalCertificatePage /> },
   
 ]
 

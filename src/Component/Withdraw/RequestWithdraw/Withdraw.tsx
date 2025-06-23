@@ -235,7 +235,7 @@ const WalletTransferFxstPayPageContainer = () => {
                       <div className="blog-content">
                         <H4>Wallet Balance</H4>
                         <hr />
-                        <div className="f-26">${walletBalance}</div>
+                        <div className="f-26">₹{walletBalance}</div>
                       </div>
 
                     </Col>
@@ -250,8 +250,8 @@ const WalletTransferFxstPayPageContainer = () => {
                 <h4>Withdrawal Guidelines</h4>
                 <p>Here’s what you need to know:</p>
                 <ul>
-                  <li><strong>Minimum Withdrawal:</strong> $50</li>
-                  <li><strong>Transaction Fee:</strong> 5% applies to all wallet types, except for FxStock Wallet, P2P & FXST Token.</li>
+                  <li><strong>Minimum Withdrawal:</strong> ₹50</li>
+                  <li><strong>Transaction Fee:</strong> 5% applies to all wallet types</li>
                 </ul>
 
               </div>

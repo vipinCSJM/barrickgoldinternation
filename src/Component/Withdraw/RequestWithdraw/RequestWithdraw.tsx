@@ -35,8 +35,6 @@ const WalletTransferFxstPayPageContainer = () => {
   useEffect(() => {
     GetWalletBalance("CommissionWallet")
   }, []);
-
-
   // Validation schema
   const WithdrawSchema = Yup.object().shape({
     WalletType: Yup.string().required("Select Wallet Type"),
@@ -147,7 +145,7 @@ const handleWithdrawAmountBlur =(e: React.FocusEvent<HTMLInputElement>,
   if( WithdrawMode === 'FXSTToken' && amount > 0){
     setshowmsg(true)
     //console.log("Withdraw Amount blurred with value:", amount, WithdrawMode, Math.floor(amount * (1/3)));
-    setmsgText(`$${amount} = ${Math.floor(amount * (1/tokenRate))} FXST [1 FXST=$${tokenRate}]`)
+    setmsgText(`${amount} = ${Math.floor(amount * (1/tokenRate))} FXST [1 FXST=${tokenRate}]`)
   } else if(amount == 0){
     setshowmsg(false)
   }
@@ -188,7 +186,7 @@ const HandlewidthDrawMode = ( event: React.ChangeEvent<HTMLSelectElement>, setFi
                       <div className="blog-content">
                         <H4>Wallet Balance</H4>
                         <hr />
-                        <div className="f-26">${walletBalance}</div>
+                        <div className="f-26">{walletBalance}</div>
                       </div>
 
                     </Col>
@@ -234,8 +232,8 @@ const HandlewidthDrawMode = ( event: React.ChangeEvent<HTMLSelectElement>, setFi
                                 onChange={(e: React.ChangeEvent<HTMLSelectElement>) => handleWalletChange(e, setFieldValue)} >
                                 <option value=''>{'Select'}</option>
                                 <option value="CommissionWallet">{'My Wallet'}</option>
-                                <option value="MT5Wallet">{'FxStock Wallet'}</option>
-                                <option value="ROIWallet">{'Trading Profit Wallet'}</option>
+                                {/* <option value="MT5Wallet">{'FxStock Wallet'}</option>
+                                <option value="ROIWallet">{'Trading Profit Wallet'}</option> */}
                               </Field>
                               <ErrorMessage name="WalletType" component="div" className="text-danger" />
                             </FormGroup>
@@ -249,10 +247,7 @@ const HandlewidthDrawMode = ( event: React.ChangeEvent<HTMLSelectElement>, setFi
                               >
                                 <option value="">{'Select'}</option>
                                 <option value="BankAccount">{'Bank Account(INR)'}</option>
-                                <option value="BankAccountAED">{'Bank Account(AED)'}</option>
-                                <option value="CreditCard">{'Credit Card'}</option>
                                 <option value="USDTAddress">{'USDT Address'}</option>
-                                <option value="FXSTToken">{'FXST Token'}</option>
                               </Field>
                               <ErrorMessage name="WithdrawMode" component="div" className="text-danger" />
                             </FormGroup>

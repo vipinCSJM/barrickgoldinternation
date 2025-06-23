@@ -221,3 +221,18 @@ export interface InvestmentReportInterface {
   sortable: boolean;
   center: boolean;
 }
+export interface RewardReportInterface {
+  name:any,
+  sortable: boolean;
+  center: boolean;
+}
+export interface PromotionalInterface {
+  name:any,
+  sortable: boolean;
+  center: boolean;
+}
+export interface PromotionalStatusInterface {
+  name:any,
+  sortable: boolean;
+  center: boolean;
+}
