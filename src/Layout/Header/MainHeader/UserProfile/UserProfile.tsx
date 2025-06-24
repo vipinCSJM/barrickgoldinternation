@@ -13,7 +13,7 @@ const UserProfile = () => {
     <LI className="profile-dropdown custom-dropdown">
       <div className="d-flex align-items-center" onClick={()=>setShow(!show)}>
         <Image src={dynamicImage("default_user.png")} alt="avatar" />
-        <div className="flex-grow-1 d-block">
+        <div className="flex-grow-1 d-none d-md-block">
          <div>
          <span>{MemberName} <span>[{userName}]</span></span>
           <div className="d-flex justify-content-between align-items-center rounded pe-2" style={{border:'2px solid #e6b855'}}>

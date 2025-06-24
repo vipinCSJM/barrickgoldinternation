@@ -82,15 +82,15 @@
             }
             .close-btn {
                 @include flex_common;
-                width: 45px;
+                width: 75px;
                 height: 45px;
-                background-color: var(--light-color);
+                background-color: #fcd77e;
                 @include media-breakpoint-down(md) {
-                    width: 38px;
+                    width: 75px;
                     height: 38px;
                 }
                 @media (max-width: 480px) {
-                    width: 32px;
+                    width: 75px;
                     height: 32px;
                 }
                 .toggle-sidebar {
@@ -104,7 +104,7 @@
                         height: 16px;
                     }
                     .line {
-                        background: var(--body-font-color);
+                        background: rgb(0 0 0);
                         display: block;
                         height: 2px;
                         border-radius: 0.1875rem;

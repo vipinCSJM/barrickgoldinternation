@@ -12,10 +12,10 @@ const AccountOverviewDetail = (props:any) => {
   
   return (
     <Row className="align-items-center">   
-      <Col xs="11" className="d-sm-none d-md-block">
-        <UL className="overview-details pb-3">
+      <Col xs="12" className="d-sm-none d-md-block">
+        <UL className="overview-details pb-2 pb-md-3">
           {props?.actOverview?.map((item:any, i:any) => (
-            <LI className="d-flex align-items-center p-0 mt-4" key={i}>
+            <LI className="d-flex align-items-center p-0 mt-2 mt-md-4" key={i}>
               <div className={`circle-dot-${overviewData[0].color}`}>
                 <span />
               </div>

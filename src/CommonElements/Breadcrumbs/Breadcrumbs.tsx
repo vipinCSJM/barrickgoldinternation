@@ -18,11 +18,8 @@ const Breadcrumbs = ({ mainTitle, parent, ChildName }: PropsTypes) => {
         <div className={mainTitle === "Dashboard" ? 'col-4 col-md-2 order-1' : 'col-md-6'}>
           <H3>{mainTitle}</H3>
         </div>
-        <div className="col-8 col-md-2 px-0 order-2 justify-content-end">
+        <div className="d-none d-md-block col-md-2 px-0 order-2 justify-content-end">
           <div className={mainTitle === "Dashboard" ? "d-flex gap-2 justify-content-end" : "d-none"}>
-          {/* <Link to="https://whatsapp.com/channel/0029Vb0wtlWLikg9GKmA1A2b" target="_blank" rel="noopener noreferrer">
-            <Image src={dynamicImage('social.png')} alt="facebook"  className="social-icon"/>
-            </Link> */}
             <Link to="#" target="_blank" rel="noopener noreferrer">
             <Image src={dynamicImage('facebook-fill.png')} alt="facebook" className="social-icon"/>
             </Link>
@@ -83,7 +80,7 @@ const Breadcrumbs = ({ mainTitle, parent, ChildName }: PropsTypes) => {
             </div> 
           </div>
         </div>
-        <div className={mainTitle === "Dashboard" ? 'col-12 mb-3 mb-md-0 col-md-3 col-xl-2 order-md-3 order-2 ' : 'col-md-6'}>
+        <div className={mainTitle === "Dashboard" ? 'col-12 mb-3 mb-md-0 col-md-3 col-xl-2 order-md-3 order-2 ' : 'd-none'}>
           <Breadcrumb className="justify-content-sm-end align-items-center">
             <BreadcrumbItem>
               <Link to={`${process.env.PUBLIC_URL}`}>
