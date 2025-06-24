@@ -1,0 +1,261 @@
+body{
+  padding-bottom: 0 !important;
+}
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(25, 25, 25, 0.8)
+    );
+    z-index: -1;
+  }
+
+  .welcome-card {
+    text-align: center;
+    height: 100%;
+    background: linear-gradient(1deg, rgb(0 0 0 / 89%) 34%, transparent);
+    position: relative;
+    width: 100%;
+
+    &.animate-in {
+      animation: slideFade 0.5s ease-in-out;
+    }
+
+    .welcome-card-content {
+      height: auto;
+      position: absolute;
+      bottom: 25px;
+      width: 100%;
+      padding: 15px;
+    }
+
+    .svg-icon {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 25px;
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    .title {
+      font-size: 29px;
+      color: #ffffff;
+      font-weight: 600;
+      margin-bottom: 15px;
+      margin-top: 10px;
+      text-transform: capitalize;
+      animation: fadeText 1s ease-in-out;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      animation: fadeText 1.2s ease-in-out;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+
+      .btn {
+        padding: 6px;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease;
+        width: 80%;
+
+        &.primary {
+          background: linear-gradient(184deg, #f7f198, #bac739);
+          color: #000;
+          box-shadow: 0px 2px 20px rgba(158, 158, 158, 0.431372549);
+        }
+
+        &.skip {
+          background: transparent;
+          font-weight: 400;
+          font-size: 13px;
+          color: #999;
+          margin-top: 10px;
+        }
+
+        &.prev {
+          background: rgba(255, 255, 255, 0.1);
+          color: #ccc;
+          border: 1px solid #444;
+        }
+      }
+
+      .login-text {
+        font-size: 14px;
+        color: #999;
+        margin-top: 10px;
+
+        a {
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .progress-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #9a9a9a9e;
+        transition: background-color 0.3s;
+
+        &.active {
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 26px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.3s;
+
+    &.left {
+      left: 15px;
+    }
+
+    &.right {
+      right: 15px;
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+  .welcome-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-heading {
+    position: absolute;
+    top: 63px;
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #c9ff11;
+    /* font-family: "Poppins", "Segoe UI", sans-serif; */
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeSlideDown 1.2s ease-out forwards;
+    z-index: 10;
+    padding: 0px 21px;
+  }
+
+  @keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .progress-dots {
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #555;
+      transition: background 0.3s;
+
+      &.active {
+        background: #ffd700;
+      }
+    }
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeText {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}

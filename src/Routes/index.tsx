@@ -7,6 +7,7 @@ import LayoutRoutes from "./LayoutRoutes";
 import PrivateRoute from "./PrivateRoute";
 import  authRoutes  from "./AuthRoutes";
 import ConnectionStatusChecker from './../CheckConnection';
+import WelcomeScreen from "../Component/Welcomescreen/WelcomeScreen";
 const RouterData = () => {
   const login = localStorage.getItem("clientId");
   return (
@@ -35,6 +36,7 @@ const RouterData = () => {
         <Route path={`${process.env.PUBLIC_URL}/forgotpassword`} element={<ForgotPassword />} />
         <Route path={`${process.env.PUBLIC_URL}/resetpassword`} element={<ResetPassword />} />
         <Route path={`${process.env.PUBLIC_URL}/connection-lost`} element={<Connectionlost />} />
+        <Route path={`${process.env.PUBLIC_URL}/welcomescreen`} element={<WelcomeScreen />} />
       </Routes>
     </BrowserRouter>
   );
