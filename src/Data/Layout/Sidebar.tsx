@@ -21,7 +21,7 @@ export const MenuList: MenuItem[] = [
         title: "Profile",
         children: [
           { path: `${process.env.PUBLIC_URL}/myprofile`, title: "My Profile", type: "link" },
-          { path: `${process.env.PUBLIC_URL}/docverification`, title: "Profile KYC", type: "link" },
+          // { path: `${process.env.PUBLIC_URL}/docverification`, title: "Profile KYC", type: "link" },
           // { path: `${process.env.PUBLIC_URL}/Welcomeletter`, title: "Welcome Letter", type: "link" },
           { path: `${process.env.PUBLIC_URL}/myidcard`, title: "My ID-Card", type: "link" },
         ],
@@ -148,8 +148,7 @@ export const MenuList: MenuItem[] = [
 
            //{ path: `${process.env.PUBLIC_URL}/profitsharing`, title: "Affiliate Income", type: "link" },
           // { path: `${process.env.PUBLIC_URL}/chashbacklevel`, title: "Cashback Level", type: "link" },
-          // { path: `${process.env.PUBLIC_URL}/royaltylog`, title: "Royalty Log", type: "link" },
-         
+          { path: `${process.env.PUBLIC_URL}/royaltylog`, title: "Royalty Income ", type: "link" },
         ],
       },
       

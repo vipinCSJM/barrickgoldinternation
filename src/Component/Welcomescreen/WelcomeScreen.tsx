@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import {  Link, useNavigate} from "react-router-dom";
+
 import "./WelcomeScreen.scss";
 import { dynamicImage } from "../../Service";
 import { FaAngleRight } from "react-icons/fa6";
@@ -33,12 +34,13 @@ const screens = [
 ];
 
 const WelcomeScreen = () => {
-  // const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (localStorage.getItem("clientId")) {
-  //     navigate(`${import.meta.env.BASE_URL}/dashboard`);
-  //   }
-  // }, []);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("clientId")) {
+      navigate(`${process.env.PUBLIC_URL}/dashboard`);
+    }
+  }, []);
 
   const [index, setIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -76,7 +78,6 @@ const WelcomeScreen = () => {
     touchEndX.current = e.changedTouches[0].clientX;
     handleSwipe();
   };
-
   const handleSwipe = () => {
     if (touchStartX.current !== null && touchEndX.current !== null) {
       const distance = touchStartX.current - touchEndX.current;
