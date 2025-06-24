@@ -227,7 +227,7 @@ export const serverColumn: TableColumn<ServerSideProcessingColumnsInterface>[] =
       sortable: true,
       center: false,
     },
-    
+  
     {
       name: "ValidBV",
       selector: (row:any) => row['ValidBV'],
