@@ -16,7 +16,7 @@ const ZoomInOut = () => {
   };
 
   return (
-    <LI>
+    <LI className="d-none d-md-inline-block">
       <Link
         onClick={() => fullScreenHandler(!fullScreen)}
         to={Href}

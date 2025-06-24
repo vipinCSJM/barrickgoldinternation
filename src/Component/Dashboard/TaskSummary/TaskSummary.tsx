@@ -11,7 +11,7 @@ const TaskSummary = (props:any) => {
       <Card className="summary-card boxshadow">
         <CardHeaderCommon headClass="pb-0 cardHeaderCustom" title={TaskSummaryHeading} firstItem={Weekly} secondItem={Monthly} thirdItem={Yearly} />
         <CardBody>
-          <Row className="py-4">
+          <Row className="py-0 py-md-4">
             <TaskSummaryLeft TeamData={TeamData} />
             <TaskSummaryRight TeamData={TeamData}/>
           </Row>

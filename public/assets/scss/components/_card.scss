@@ -12,6 +12,7 @@
     box-shadow: var(--card-box-shadow);
     @include media-breakpoint-down(sm) {
         margin-bottom: 14px;
+        border: 1px solid #fad57a75;
     }
     &-header {
         border: none;
