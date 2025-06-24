@@ -39,9 +39,9 @@ const RoyaltylogReport = () => {
     const formattedToDate = format(initialValues?.ToDate!, 'dd-MMMM-yyyy');
   setSeaarchData_date({FormDate:formattedFromDate, ToDate:formattedToDate})
   setAPIPayload({
-    procName:"MemberRoyalityLog",
-    Para:JSON.stringify({ClientId:ClientID, FromDate:formattedFromDate, ToDate:formattedToDate, ActionMode:"GetRoyalityLog"})
-  })
+    procName:"GetRoyaltyIncome",
+    Para:JSON.stringify({ClientId:ClientID, FromDate:formattedFromDate, ToDate:formattedToDate, ActionMode:"SelectByIdViewByMember"})
+   })
  },[])
 
 
@@ -54,8 +54,8 @@ const RoyaltylogReport = () => {
     console.log(formattedFromDate, formattedToDate);
     setSeaarchData_date({FormDate:formattedFromDate, ToDate:formattedToDate})
     setAPIPayload({
-      procName:"MemberRoyalityLog",
-      Para:JSON.stringify({ClientId:ClientID, FromDate:formattedFromDate, ToDate:formattedToDate, ActionMode:"GetRoyalityLog"})
+      procName:"GetRoyaltyIncome",
+      Para:JSON.stringify({ClientId:ClientID, FromDate:formattedFromDate, ToDate:formattedToDate, ActionMode:"SelectByIdViewByMember"})
     })
  };
 

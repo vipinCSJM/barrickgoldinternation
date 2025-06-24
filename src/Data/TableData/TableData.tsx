@@ -208,22 +208,34 @@ export const serverColumn: TableColumn<ServerSideProcessingColumnsInterface>[] =
 
   export const royality_logData: TableColumn<RoyalityLogInterface>[]=[
     {
-      name: "SNo",
-      selector: (row:any) => row['SNo'],
+      name: "S.No.",
+      selector: (row:any) => row['S.No.'],
       sortable: true,
       center: false,
       width:'100px'
     },
     {
-      name: "TeamBusiness",
-      selector: (row:any) => row['TeamBusiness'],
+      name: "TotalBusiness",
+      selector: (row:any) => row['TotalBusiness'],
       sortable: true,
       center: false,
       width:'200px'
     },
     {
-      name: "RoyalityPer",
-      selector: (row:any) => row['RoyalityPer'],
+      name: "RoyaltyPercentage",
+      selector: (row:any) => row['RoyaltyPercentage'],
+      sortable: true,
+      center: false,
+    },
+    {
+      name: "ValidBV",
+      selector: (row:any) => row['ValidBV'],
+      sortable: true,
+      center: false,
+    },
+    {
+      name: "TotalMember",
+      selector: (row:any) => row['TotalMember'],
       sortable: true,
       center: false,
     },
@@ -234,17 +246,12 @@ export const serverColumn: TableColumn<ServerSideProcessingColumnsInterface>[] =
       center: false,
     },
     {
-      name: "Date",
-      selector: (row:any) => row['Date'],
+      name: "IncomeDate",
+      selector: (row:any) => row['IncomeDate'],
       sortable: true,
       center: false,
-    },
-    {
-      name: "IncomeType",
-      selector: (row:any) => row['IncomeType'],
-      sortable: true,
-      center: false,
-    },
+    }
+    
   ]
 
   export const cash_backLevel : TableColumn<CashbackLevelInterface> [] =[
