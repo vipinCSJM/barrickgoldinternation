@@ -24,6 +24,7 @@ const BottomNavBar: React.FC = () => {
   const HandleTab = (path: any) => {
     // handleNavClick(path);
     setActive(path);
+    navigate(`${process.env.PUBLIC_URL}/${path}`);
   };
 
   return (
@@ -38,8 +39,8 @@ const BottomNavBar: React.FC = () => {
         </div>
 
         <div
-          className={`nav-item ${active === "withdrawfund" ? "active" : ""}`}
-          onClick={() => HandleTab("withdrawfund")}
+          className={`nav-item ${active === "RequestWithdraw" ? "active" : ""}`}
+          onClick={() => HandleTab("BuyGold")}
         >
           <Image
             src={dynamicImage("nav-icon/hand-withdraw.svg")}
@@ -65,8 +66,8 @@ const BottomNavBar: React.FC = () => {
           <span>Add Fund</span>
         </div>
         <div
-          className={`nav-item ${active === "sponsorlist" ? "active" : ""}`}
-          onClick={() => HandleTab("sponsorlist")}
+          className={`nav-item ${active === "teamdownline" ? "active" : ""}`}
+          onClick={() => HandleTab("teamdownline")}
         >
           <Image src={dynamicImage("nav-icon/users-three.svg")} alt="wallet" />
           <span>Team</span>
