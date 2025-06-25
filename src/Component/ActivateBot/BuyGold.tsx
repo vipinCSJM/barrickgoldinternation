@@ -286,7 +286,7 @@ setconvertedPrice(0);
           
           </Col>
           <Col xl="6" xs="12">
-           <Image  alt='popimage' title='popImage' src={("assets/images/logo/sideimage.png")} />
+           <Image  alt='popimage' title='popImage' src={("assets/images/logo/sideimage.png")} style={{ width: '100%', height: '100%', objectFit: 'cover'}} />
           </Col>
         </Row>
       </Container>
