@@ -209,7 +209,7 @@ const GOLD_PRICE_PER_GRAM = pricePerGramINR; // ₹ per gram
       
       <div className="gold-calculator">
       <div className="form-group timer-div">
-        <span className="time" id="Timer">{formatTime(timeLeft)}</span>
+        <span className="time">Market rates refresh in <span id="Timer">{formatTime(timeLeft)}</span></span>
       </div>
       <div className="form-group gold-radio-container radio-group">
         <label className="form-check-inline gold-radio custom-radio">
