@@ -294,6 +294,7 @@ const handleSubmitPan = async() => {
           </div>
           <div className="form-group" style={{
     height: 'auto',
+    
     width: '215px',
     border: 'dashed 2px #b9b5b5',
     padding: '10px',
