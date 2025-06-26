@@ -410,6 +410,7 @@
 .page {
     &-wrapper {
         position: relative;
+         padding-bottom: 85px;
         &.sidebar-close {
             margin-left: 0;
             transition: 0.5s all;
