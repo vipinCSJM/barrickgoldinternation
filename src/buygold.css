@@ -5,14 +5,16 @@
   color: white;
   max-width: 600px;
   margin: 0 auto;
-   font-family: "Comfortaa", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   position: relative;
   text-align: center;
 }
 
 .time {
-  float: right;
-  opacity: 0.7;
+  font-size: 15px;
+  color: #ffd700;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .gold-radio-container {
@@ -66,30 +68,28 @@
 .gold-radio input[type="radio"] {
   width: 20px;
   height: 20px;
-  
+
   margin-right: 6px;
 }
-.cardbuy{
-    padding: 20px;
-    border-radius: 10px;
-    background: #454141;
-
-    
+.cardbuy {
+  padding: 20px;
+  border-radius: 10px;
+  background: #454141;
 }
-    .rupeeIcon{
-          font-size: 20px;
-    display: block;
-    height: 40px;
-    width: 40px;
-    background-color: #ffe100;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50px;
-    color: #000 !important;
-    border: solid 1px;
-    }
+.rupeeIcon {
+  font-size: 20px;
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: #ffe100;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50px;
+  color: #000 !important;
+  border: solid 1px;
+}
 
-    .radio-group {
+.radio-group {
   display: flex;
   gap: 20px;
   font-family: "Comfortaa", sans-serif;
@@ -100,7 +100,7 @@
   position: relative;
   padding-left: 30px;
   cursor: pointer;
-  color: #FFD700; /* Gold text */
+  color: #ffd700; /* Gold text */
   user-select: none;
   font-size: 20px;
 }
@@ -118,14 +118,14 @@
   height: 20px;
   width: 20px;
   background-color: black;
-  border: 2px solid #FFD700;
+  border: 2px solid #ffd700;
   border-radius: 50%;
   transition: 0.3s;
 }
 
 .custom-radio input:checked ~ .radio-mark {
-  background-color: #FFD700;
-  box-shadow: 0 0 5px #FFD700;
+  background-color: #ffd700;
+  box-shadow: 0 0 5px #ffd700;
 }
 
 .radio-mark::after {
@@ -142,4 +142,32 @@
 
 .custom-radio input:checked ~ .radio-mark::after {
   display: block;
+}
+@media only screen and (max-width: 600px) {
+  .custom-radio {
+    padding-left: 27px !important;
+    font-size: 12px !important;
+    line-height: 22px;
+  }
+  .radio-mark {
+    top: 0px !important;
+  }
+  .input-group-text {
+    font-size: 10px !important;
+  }
+  .gold-calculator {
+    background-color: #5c5c5c;
+    padding: 20px 15px !important;
+  }
+  .radio-group {
+    display: flex;
+    gap: 10px;
+  }
+  .livePrice_buy h4,
+  .livePrice_purity h4 {
+    font-size: 16px;
+  }
+  .buy-button {
+    font-size: 14px;
+  }
 }
