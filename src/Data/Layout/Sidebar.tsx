@@ -12,7 +12,6 @@ export const MenuList: MenuItem[] = [
         title: "Dashboard",
         path: `${process.env.PUBLIC_URL}/dashboard`,
         type: "link",
-        
       },
       {
         icon: "Profile",
@@ -21,6 +20,7 @@ export const MenuList: MenuItem[] = [
         title: "Profile",
         children: [
           { path: `${process.env.PUBLIC_URL}/myprofile`, title: "My Profile", type: "link" },
+          { path: `${process.env.PUBLIC_URL}/KYC`, title: "KYC", type: "link" },
           // { path: `${process.env.PUBLIC_URL}/docverification`, title: "Profile KYC", type: "link" },
           // { path: `${process.env.PUBLIC_URL}/Welcomeletter`, title: "Welcome Letter", type: "link" },
           { path: `${process.env.PUBLIC_URL}/myidcard`, title: "My ID-Card", type: "link" },

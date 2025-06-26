@@ -289,3 +289,5 @@ export const DeleteSupportTicket = "DeleteSupportTicket";
 
 export const ActStatement = "Account Statement"
 export const buygold = "Buy Gold";
+export const KYC = " KYC ";
+
