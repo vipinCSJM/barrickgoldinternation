@@ -40,7 +40,7 @@ const BottomNavBar: React.FC = () => {
 
         <div
           className={`nav-item ${active === "RequestWithdraw" ? "active" : ""}`}
-          onClick={() => HandleTab("BuyGold")}
+          onClick={() => HandleTab("RequestWithdraw")}
         >
           <Image
             src={dynamicImage("nav-icon/hand-withdraw.svg")}
@@ -50,20 +50,18 @@ const BottomNavBar: React.FC = () => {
         </div>
 
         <div
-          className={`nav-item add-btn ${active === "bep20" ? "active" : ""}`}
-          onClick={() => HandleTab("bep20")}
+          className={`nav-item add-btn ${active === "BuyGold" ? "active" : ""}`}
+          onClick={() => HandleTab("BuyGold")}
         >
           <div className="add-icon">
             <div className="brand-logo">
-              {/* <div className="logo-rotation-frame">
-                <Image src={dynamicImage("logo/logo-text.png")} alt="logo" />
-              </div> */}
+             
               <div className="logo-rotation-wrapper  ">
                 <Image src={dynamicImage("nav-icon/plus.png")} alt="logo" />
               </div>
             </div>
           </div>
-          <span>Add Fund</span>
+          <span>Buy Gold</span>
         </div>
         <div
           className={`nav-item ${active === "teamdownline" ? "active" : ""}`}

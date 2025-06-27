@@ -55,6 +55,7 @@ import RewardReport from "../Component/Payout/RewardReport";
 import PromotionalClubPage from "../Pages/Payout/PromotionalClub";
 import PromotionalStatus from "../Pages/Payout/PromotionalStatus";
 import DigitalCertificatePage from "../Pages/ActivateBot/DigitalCertificatePage";
+import KYC from "../Pages/AccountSettings/KYC";
 
 const routes = [
 
@@ -116,6 +117,7 @@ const routes = [
   { path: `${process.env.PUBLIC_URL}/BuyGold`, Component: <BuyGoldPage /> },
   { path: `${process.env.PUBLIC_URL}/BuyGoldReport`, Component: <InvestmentReport /> },
   { path: `${process.env.PUBLIC_URL}/DigitalCertificatePage/:id`, Component: <DigitalCertificatePage /> },
+  { path: `${process.env.PUBLIC_URL}/KYC`, Component: <KYC /> },
   
 ]
 
