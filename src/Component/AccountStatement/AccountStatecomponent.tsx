@@ -20,7 +20,6 @@ interface FormValues {
   ToDate: Date | null;
 }
 
-
 const AccountStatecomponent = () => {
   const [memberID, setmemberID] = useState(decryptData(localStorage.getItem('clientId') as string))
   const [SeaarchData_date, setSeaarchData_date] =useState<any>(null)
